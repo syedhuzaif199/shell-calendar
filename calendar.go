@@ -86,7 +86,6 @@ func main() {
 	}
 
 	currentTime := time.Now()
-	currentTime = currentTime.AddDate(0, 4, 0)
 	timefmt := currentTime.Format("03:04:05 PM")
 	monthYear := fmt.Sprintf("%s %d", currentTime.Month(), currentTime.Year())
 	
