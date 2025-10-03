@@ -86,6 +86,7 @@ func main() {
 	}
 
 	currentTime := time.Now()
+	currentTime = currentTime.AddDate(0, 4, 0)
 	timefmt := currentTime.Format("03:04:05 PM")
 	monthYear := fmt.Sprintf("%s %d", currentTime.Month(), currentTime.Year())
 	
@@ -110,13 +111,9 @@ func main() {
 	fmt.Println()
 	fmt.Println()
 
-	dayCount := 30 + (int(currentTime.Month())+1)%2
-	if currentTime.Month() == time.February {
-		dayCount -= 3
-		if currentTime.Year()%4 == 0 {
-			dayCount += 1
-		}
-	}
+	firstOfMonth := time.Date(currentTime.Year(), currentTime.Month(), 1, 0, 0, 0, 0, currentTime.Location())
+	lastOfMonth := firstOfMonth.AddDate(0, 1, -1)
+	dayCount := lastOfMonth.Day()
 
 	
 	daysPassed := int(currentTime.AddDate(0, 0, -currentTime.Day() + 1).Weekday()) - dayOffset
