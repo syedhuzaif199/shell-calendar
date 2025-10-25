@@ -2,6 +2,11 @@
 ### Requirements
 - [go](https://go.dev/doc/install) 1.24.3 or higher
 ### Installation
+1. Clone the repository:
+```bash
+git clone https://github.com/syedhuzaif199/shell-calendar.git
+```
+2. Run go install:
 ```bash
 go install
 ```
