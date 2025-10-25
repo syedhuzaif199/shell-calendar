@@ -6,7 +6,11 @@
 ```bash
 git clone https://github.com/syedhuzaif199/shell-calendar.git
 ```
-2. Run go install:
+2. Navigate to the shell-calendar directory:
+   ```bash
+   cd shell-calendar
+   ```
+3. Run go install:
 ```bash
 go install
 ```
